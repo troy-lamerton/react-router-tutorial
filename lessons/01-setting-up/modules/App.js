@@ -1,14 +1,16 @@
 import React from 'react'
-import { Link } from 'react-router'
+import NavLink from './NavLink'
+import { IndexLink } from 'react-router'
 
 export default React.createClass({
   render() {
     return (
       <div>
-        <p>Hello, This is the react router app!</p>
+        <h1>Main app</h1>
         <ul role="nav">
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/repos">Repos</Link></li>
+          <li><NavLink to="/" onlyActiveOnIndex={true}>Home</NavLink></li>
+          <li><NavLink to="/about">About</NavLink></li>
+          <li><NavLink to="/repos">Repos</NavLink></li>
         </ul>
 
         {this.props.children}
